@@ -7,7 +7,7 @@ WORKDIR /app
 COPY web .
 RUN npm install --omit=dev
 RUN npm remove @shopify/app @shopify/cli
-RUN npm run buil
+RUN npm run build
 # RUN cd frontend && npm install && npm run build
 RUN rm -f prisma/dev.sqlite
 
