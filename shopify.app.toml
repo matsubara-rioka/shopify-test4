@@ -2,7 +2,7 @@
 
 name = "my-node-test2"
 client_id = "bf102f5e873ae0550662a376b06449f9"
-application_url = "https://disclaimers-collections-screenshots-diesel.trycloudflare.com"
+application_url = "https://lived-identifies-father-come.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://disclaimers-collections-screenshots-diesel.trycloudflare.com/auth/callback",
-  "https://disclaimers-collections-screenshots-diesel.trycloudflare.com/auth/shopify/callback",
-  "https://disclaimers-collections-screenshots-diesel.trycloudflare.com/api/auth/callback",
-  "https://disclaimers-collections-screenshots-diesel.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://lived-identifies-father-come.trycloudflare.com/auth/callback",
+  "https://lived-identifies-father-come.trycloudflare.com/auth/shopify/callback",
+  "https://lived-identifies-father-come.trycloudflare.com/api/auth/callback",
+  "https://lived-identifies-father-come.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
@@ -25,4 +25,4 @@ embedded = false
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "test-si-li.myshopify.com"
+dev_store_url = "test-si-matsubara.myshopify.com"
