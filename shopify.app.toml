@@ -2,7 +2,7 @@
 
 name = "my-node-test2"
 client_id = "bf102f5e873ae0550662a376b06449f9"
-application_url = "https://lived-identifies-father-come.trycloudflare.com"
+application_url = "https://shopify-test4.onrender.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://lived-identifies-father-come.trycloudflare.com/auth/callback",
-  "https://lived-identifies-father-come.trycloudflare.com/auth/shopify/callback",
-  "https://lived-identifies-father-come.trycloudflare.com/api/auth/callback",
-  "https://lived-identifies-father-come.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://shopify-test4.onrender.com/auth/callback",
+  "https://shopify-test4.onrender.com/auth/shopify/callback",
+  "https://shopify-test4.onrender.com/api/auth/callback",
+  "https://shopify-test4.onrender.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]
