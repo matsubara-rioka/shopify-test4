@@ -64,12 +64,12 @@ app.use(shopify.cspHeaders());
 app.use(serveStatic(STATIC_PATH, { index: false }));
 
 // 成果物4mod start
-// app.use("/*", shopify.ensureInstalledOnShop(), async (_req, res, _next) => {
-//   return res
-//     .status(200)
-//     .set("Content-Type", "text/html")
-//     .send(readFileSync(join(STATIC_PATH, "index.html")));
-// });
+app.use("/*", shopify.ensureInstalledOnShop(), async (_req, res, _next) => {
+  return res
+    .status(200)
+    .set("Content-Type", "text/html")
+    .send(readFileSync(join(STATIC_PATH, "index.html")));
+});
 const addSessionShopToReqParams = (req, res, next) => {
   const shop = res.locals?.shopify?.session?.shop;
   if (shop && !req.query.shop) {
