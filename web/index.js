@@ -63,12 +63,26 @@ app.get("/api/products/create", async (_req, res) => {
 app.use(shopify.cspHeaders());
 app.use(serveStatic(STATIC_PATH, { index: false }));
 
-app.use("/*", shopify.ensureInstalledOnShop(), async (_req, res, _next) => {
-  return res
-    .status(200)
-    .set("Content-Type", "text/html")
-    .send(readFileSync(join(STATIC_PATH, "index.html")));
-});
+// 成果物4mod start
+// app.use("/*", shopify.ensureInstalledOnShop(), async (_req, res, _next) => {
+//   return res
+//     .status(200)
+//     .set("Content-Type", "text/html")
+//     .send(readFileSync(join(STATIC_PATH, "index.html")));
+// });
+const addSessionShopToReqParams = (req, res, next) => {
+  const shop = res.locals?.shopify?.session?.shop;
+  if (shop && !req.query.shop) {
+    req.query.shop = shop;
+  }
+  return next();
+}
+
+app.use("/api/*", shopify.validateAuthenticatedSession());
+
+app.use("/*", addSessionShopToReqParams);
+// 成果物4mod end
+
 
 app.listen(PORT);
 
